@@ -83,9 +83,9 @@ const Blog1 = () => {
 
         {/* HEADER (split text) */}
         <div ref={headerRef}>
-          <h1>RICHBECKY</h1>
-          <h1 className='ml-[20%] max-lg:ml-10'>BEAUTY</h1>
-          <h1 className='ml-[40%] max-lg:ml-20'>TIPS</h1>
+          <h1>OSAHON</h1>
+          <h1 className='ml-[20%] max-lg:ml-10'>SHOES</h1>
+          <h1 className='ml-[40%] max-lg:ml-20'>ADVICE</h1>
         </div>
 
         {/* TWO WIDE Blog1 POSTS */}
@@ -94,16 +94,16 @@ const Blog1 = () => {
           className='flex flex-row gap-28 mt-10 max-lg:flex-col max-lg:gap-12'
         >
           <div className='max-w-[300px]'>
-            <img className='w-[300px]' src={'/Blog1lady.png'} />
+            <img className='w-[300px]' src={'/shoedemo5.png'} />
             <p className='font-sans text-lg mt-2'>
-              Top 10 Affordable Products to get your winter glow
+              Top 5 reasons your oxfords don't last
             </p>
           </div>
 
           <div className='max-w-[300px]'>
-            <img className='w-[300px]' src={'/Blog1lady.png'} />
+            <img className='w-[300px]' src={'/shoedemo5.png'} />
             <p className='font-sans text-lg mt-2'>
-              Top 10 Affordable Products to get your winter glow
+              Top 5 reasons your oxfords don't last
             </p>
           </div>
         </div>
@@ -119,9 +119,9 @@ const Blog1 = () => {
               key={product}
               className='max-w-[400px] gap-8 items-center flex flex-row mb-6'
             >
-              <img className='size-20 object-cover' src={'/Blog1lady.png'} />
+              <img className='size-20 object-cover' src={'/shoedemo5.png'} />
               <p className='font-sans text-lg'>
-                Top 10 Affordable Products to get your winter glow
+                Top 5 reasons your oxfords don't last
               </p>
             </div>
           ))}

@@ -11,11 +11,11 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 const testimonials = [
   {
     id: 1,
-    text: "Very affordable prices for such high-quality products. My skin has never felt better!",
+    text: "Very affordable prices for such high-quality products. I've recommended OSAHON to all my friends!",
   },
   {
     id: 2,
-    text: "I love how Richbecky Collections prioritizes natural ingredients. My skin feels nourished and radiant.",
+    text: "The shoe I purchased exceeded my expectations in both comfort and style. Will definitely shop here again.",
   },
   {
     id: 3,
@@ -109,7 +109,7 @@ const Testimonials2 = () => {
         ref={headlineRef}
         className="text-black font-clarimind text-4xl sm:text-5xl md:text-6xl lg:text-8xl md:absolute"
       >
-        What Our <span className="text-pink-400">Client</span> Say
+        What Our <span className="text-slate-400">Client</span> Say
       </h1>
 
       {/* CONTENT */}
@@ -120,15 +120,15 @@ const Testimonials2 = () => {
         {/* Subtext + Chevron Controls */}
         <div className="flex flex-row max-md:flex-col relative z-50 justify-between mt-10 items-start">
           <h2 className="text-black/70 text-lg sm:text-xl md:text-2xl max-md:w-full max-w-4xl font-light px-2 sm:px-4 leading-relaxed">
-            Richbecky collections has the best serums, moisturizers, and beauty products that have transformed my skincare routine. The quality and effectiveness are unmatched!
+            OSAHON Collections values its customers and strives to provide the best products and services. Here's what some of our satisfied clients have to say about their experience with us.
           </h2>
-          <div className="text-5xl text-pink-400 flex  order-3 z-50 flex-row gap-6 pr-2">
+          <div className="text-5xl text-slate-400 flex  order-3 z-50 flex-row gap-6 pr-2">
             <CiCircleChevLeft
-              className="text-black hover:text-pink-400 transition cursor-pointer"
+              className="text-black hover:text-slate-400 transition cursor-pointer"
               onClick={handlePrev}
             />
             <IoChevronForwardCircle
-              className="hover:text-pink-500 transition cursor-pointer"
+              className="hover:text-slate-500 transition cursor-pointer"
               onClick={handleNext}
             />
           </div>
@@ -160,7 +160,7 @@ const Testimonials2 = () => {
             <div
               key={i}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                i === current ? "bg-pink-500 scale-110" : "bg-gray-300"
+                i === current ? "bg-slate-500 scale-110" : "bg-gray-300"
               }`}
             ></div>
           ))}

@@ -100,7 +100,7 @@ const Contact1 = () => {
           placeholder="Enter your email"
         />
 
-        <button className="flex flex-row gap-3 items-center bg-pink-700 px-6 py-3 mt-4 rounded-xl text-white font-bold hover:bg-pink-800 transition-all hover:scale-[1.03]">
+        <button className="flex flex-row gap-3 items-center bg-slate-100 px-6 py-3 mt-4 rounded-xl text-black font-bold hover:bg-slate-200 transition-all hover:scale-[1.03]">
           <IoSend className="text-2xl" />
           Send Message
         </button>

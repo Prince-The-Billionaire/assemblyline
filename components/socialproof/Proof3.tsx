@@ -124,7 +124,7 @@ const Proof3: React.FC = () => {
           ref={marqueeRef}
           className="whitespace-nowrap flex gap-10 text-lg sm:text-xl font-bold px-6 items-center"
         >
-          {[...Array(5)].map((_, i) => (
+          {[...Array(15)].map((_, i) => (
             <span key={i} className="flex items-center gap-3 text-black">
               <FaSnowflake size={20} /> Christmas Sales • 30% OFF
             </span>
@@ -142,20 +142,20 @@ const Proof3: React.FC = () => {
         {/* LEFT — TEXT */}
         <div className="order-1 md:order-1">
           <div ref={numberRef} className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            300k+ items sold
+            100k+ items sold
           </div>
 
           <h2
             ref={headingRef}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black font-salsa leading-tight mb-4"
           >
-            Discover the glow your skin deserves.
+            Discover the shoes everyone is talking about
           </h2>
 
           <div ref={pointsRef} className="space-y-2 text-black/90 mb-6">
-            <div>• Solves acne problems</div>
-            <div>• Gentle, dermatologist-tested</div>
-            <div>• Cruelty-free and eco-friendly</div>
+            <div>• Premium look and aesthetic</div>
+            <div>• Properly fitted</div>
+            <div>• 3-5 Days delivery</div>
           </div>
 
           <div className="flex items-center justify-between">
@@ -191,7 +191,7 @@ const Proof3: React.FC = () => {
             rounded-lg overflow-hidden 
             h-[60vh] bg-cover bg-center
           "
-          style={{ backgroundImage: "url('/beauty1.png')" }}
+          style={{ backgroundImage: "url('/shoedemo4.png')" }}
         />
       </div>
     </section>
