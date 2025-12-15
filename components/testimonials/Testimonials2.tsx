@@ -11,15 +11,15 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 const testimonials = [
   {
     id: 1,
-    text: "Very affordable prices for such high-quality products. I've recommended OSAHON to all my friends!",
+    text: "Huje Consult helped me find the perfect family home — excellent guidance and quick viewings.",
   },
   {
     id: 2,
-    text: "The shoe I purchased exceeded my expectations in both comfort and style. Will definitely shop here again.",
+    text: "Professional, transparent and responsive. I sold my property faster than expected with Huje Consult.",
   },
   {
     id: 3,
-    text: "The customer service is outstanding. They really care about their customers' satisfaction.",
+    text: "Great market knowledge and personalized service. Highly recommended for investors and home buyers.",
   },
 ];
 
@@ -109,7 +109,7 @@ const Testimonials2 = () => {
         ref={headlineRef}
         className="text-black font-clarimind text-4xl sm:text-5xl md:text-6xl lg:text-8xl md:absolute"
       >
-        What Our <span className="text-slate-400">Client</span> Say
+        What Clients <span className="text-sky-400">Say </span> About Us
       </h1>
 
       {/* CONTENT */}
@@ -117,31 +117,26 @@ const Testimonials2 = () => {
         ref={contentRef}
         className="flex flex-col text-left w-full space-y-8 mb:mt-32"
       >
-        {/* Subtext + Chevron Controls */}
         <div className="flex flex-row max-md:flex-col relative z-50 justify-between mt-10 items-start">
           <h2 className="text-black/70 text-lg sm:text-xl md:text-2xl max-md:w-full max-w-4xl font-light px-2 sm:px-4 leading-relaxed">
-            OSAHON Collections values its customers and strives to provide the best products and services. Here's what some of our satisfied clients have to say about their experience with us.
+            Huje Consult provides tailored property services — from valuations and viewings to closing deals smoothly.
           </h2>
-          <div className="text-5xl text-slate-400 flex  order-3 z-50 flex-row gap-6 pr-2">
+          <div className="text-5xl text-sky-400 flex  order-3 z-50 flex-row gap-6 pr-2">
             <CiCircleChevLeft
-              className="text-black hover:text-slate-400 transition cursor-pointer"
+              className="text-black hover:text-sky-300 transition cursor-pointer"
               onClick={handlePrev}
             />
             <IoChevronForwardCircle
-              className="hover:text-slate-500 transition cursor-pointer"
+              className="hover:text-sky-500 transition cursor-pointer"
               onClick={handleNext}
             />
           </div>
         </div>
 
-        {/* Testimonials Section */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-6 relative min-h-[220px]">
           {testimonials.map((t, i) => (
             <div
               key={t.id}
-            //   ref={(el) => {
-            //     if (el) cardsRef.current[i] = el;
-            //   }}
               className={`absolute transition-all duration-700 ease-in-out transform w-[90%] sm:w-3xl bg-white p-6 shadow-md rounded-2xl border border-gray-100 ${
                 i === current
                   ? "opacity-100 translate-x-0 scale-100"
@@ -154,13 +149,12 @@ const Testimonials2 = () => {
           ))}
         </div>
 
-        {/* Pagination Dots */}
         <div className="flex justify-center mt-10 gap-3">
           {testimonials.map((_, i) => (
             <div
               key={i}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                i === current ? "bg-slate-500 scale-110" : "bg-gray-300"
+                i === current ? "bg-sky-500 scale-110" : "bg-gray-300"
               }`}
             ></div>
           ))}

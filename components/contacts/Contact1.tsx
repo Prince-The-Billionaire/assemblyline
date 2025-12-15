@@ -20,7 +20,6 @@ const Contact1 = () => {
       type: "chars",
     });
 
-    // Animate the big header text
     gsap.from(split.chars, {
       scrollTrigger: {
         trigger: headingRef.current,
@@ -33,7 +32,6 @@ const Contact1 = () => {
       duration: 1,
     });
 
-    // Arrow scale animation
     gsap.from(arrowRef.current, {
       scrollTrigger: {
         trigger: arrowRef.current,
@@ -46,7 +44,6 @@ const Contact1 = () => {
       duration: 1,
     });
 
-    // Contact form fade + slide from right
     gsap.from(formRef.current, {
       scrollTrigger: {
         trigger: formRef.current,
@@ -61,12 +58,14 @@ const Contact1 = () => {
 
   return (
     <div className="bg-gray-100 w-screen max-md:px-2 md:px-24 flex flex-col lg:flex-row h-full lg:h-screen py-24 lg:py-0 gap-16">
-
       {/* LEFT SIDE */}
-      <div ref={headingRef} className="text-7xl text-black flex flex-col justify-center">
+      <div
+        ref={headingRef}
+        className="text-7xl text-black flex flex-col justify-center"
+      >
         <h1>Contact</h1>
-        <h1 className="ml-[8%]">Us</h1>
-        <h1 className="ml-[12%]">Here</h1>
+        <h1 className="ml-[8%]">Huje</h1>
+        <h1 className="ml-[12%]">Consult</h1>
 
         <img
           ref={arrowRef}
@@ -81,9 +80,10 @@ const Contact1 = () => {
         ref={formRef}
         className="bg-black rounded-2xl flex flex-col p-10 h-fit w-full lg:w-[40%] text-white self-center"
       >
-        <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+        <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
         <p className="text-white/70 text-lg mb-10">
-          We'd love to hear from you. Fill in your details below.
+          For property enquiries, valuations, or to schedule a viewing, contact
+          Huje Consult and our team will assist you.
         </p>
 
         <label className="text-xl font-semibold mb-2">Your Name</label>
@@ -100,7 +100,7 @@ const Contact1 = () => {
           placeholder="Enter your email"
         />
 
-        <button className="flex flex-row gap-3 items-center bg-slate-100 px-6 py-3 mt-4 rounded-xl text-black font-bold hover:bg-slate-200 transition-all hover:scale-[1.03]">
+        <button className="flex flex-row gap-3 items-center bg-sky-400 px-6 py-3 mt-4 rounded-xl text-black font-bold hover:bg-sky-500 transition-all hover:scale-[1.03]">
           <IoSend className="text-2xl" />
           Send Message
         </button>

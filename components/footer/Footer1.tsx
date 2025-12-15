@@ -47,40 +47,41 @@ const Footer1 = () => {
             {/* Brand Section */}
             <div className="flex-1">
               <h1 className="text-3xl md:text-4xl font-bold text-white">
-                OSAHON
+                Huje Consult
               </h1>
               <p className="text-lg text-white/60 max-w-lg max-md:max-w-sm mt-4 leading-relaxed">
-                OSAHON is your go-to destination for premium shoes that
-                combine style, comfort, and durability. Step into excellence
-                with every pair.
+                Huje Consult is a premier real estate firm helping homeowners and
+                investors find quality properties across prime locations. We
+                combine market expertise, personalised guidance, and trusted
+                service to make your property journey seamless.
               </p>
-              <div className="text-3xl max-md:text-xl flex flex-row gap-6 mt-8 text-white/80">
-                <IoLogoInstagram className="cursor-pointer hover:text-slate-400 transition" />
-                <IoLogoWhatsapp className="cursor-pointer hover:text-slate-400 transition" />
-                <IoLogoLinkedin className="cursor-pointer hover:text-slate-400 transition" />
-                <IoLogoFacebook className="cursor-pointer hover:text-slate-400 transition" />
-                <IoLogoYoutube className="cursor-pointer hover:text-slate-400 transition" />
+              <div className="text-3xl max-md:text-xl flex flex-row gap-6 mt-8 text-sky-400/90">
+                <IoLogoInstagram className="cursor-pointer hover:text-sky-300 transition" />
+                <IoLogoWhatsapp className="cursor-pointer hover:text-sky-300 transition" />
+                <IoLogoLinkedin className="cursor-pointer hover:text-sky-300 transition" />
+                <IoLogoFacebook className="cursor-pointer hover:text-sky-300 transition" />
+                <IoLogoYoutube className="cursor-pointer hover:text-sky-300 transition" />
               </div>
             </div>
 
-            {/* Footer1 Links */}
+            {/* Footer links */}
             <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-8 text-white/80">
               <div>
                 <h2 className="text-xl font-semibold text-white mb-4">
-                  Products
+                  Properties
                 </h2>
                 <ul className="flex flex-col gap-2 text-white/70 text-sm">
                   <li className="hover:text-slate-300 cursor-pointer transition">
-                    Oxfords
+                    For Sale
                   </li>
                   <li className="hover:text-slate-300 cursor-pointer transition">
-                    Loafers
+                    For Rent
                   </li>
                   <li className="hover:text-slate-300 cursor-pointer transition">
-                    Sneakers
+                    Commercial
                   </li>
                   <li className="hover:text-slate-300 cursor-pointer transition">
-                    Boots
+                    New Developments
                   </li>
                 </ul>
               </div>
@@ -89,7 +90,7 @@ const Footer1 = () => {
                 <h2 className="text-xl font-semibold text-white mb-4">Company</h2>
                 <ul className="flex flex-col gap-2 text-white/70 text-sm">
                   <li className="hover:text-slate-300 cursor-pointer transition">
-                    About Us
+                    About Huje Consult
                   </li>
                   <li className="hover:text-slate-300 cursor-pointer transition">
                     Blog
@@ -130,10 +131,9 @@ const Footer1 = () => {
 
           {/* Copyright */}
           <p className="text-center text-white/60 text-sm md:text-base mt-4">
-            © {new Date().getFullYear()} OSAHON. All rights reserved.
+            © {new Date().getFullYear()} Huje Consult. All rights reserved.
           </p>
         </div>
-        
       </div>
     </div>
   );

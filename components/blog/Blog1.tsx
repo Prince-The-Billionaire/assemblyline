@@ -9,20 +9,14 @@ gsap.registerPlugin(SplitText, ScrollTrigger)
 
 const Blog1 = () => {
   const headerRef = useRef<HTMLDivElement>(null);
-    const bottomBlog1sRef = useRef<HTMLDivElement>(null);
-    const rightBlog1sRef = useRef<HTMLDivElement>(null);
-    const containerRef = useRef<HTMLDivElement>(null);
+  const bottomBlog1sRef = useRef<HTMLDivElement>(null);
+  const rightBlog1sRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-    
-    if (!headerRef.current || !bottomBlog1sRef.current || !rightBlog1sRef.current || !containerRef.current) return;
-      /* -----------------------------
-         SPLIT TEXT HEADER ANIMATION
-      ----------------------------- */
-      const split = new SplitText(headerRef.current, {
-        type: "lines",
-      })
+      if (!headerRef.current || !bottomBlog1sRef.current || !rightBlog1sRef.current || !containerRef.current) return;
+      const split = new SplitText(headerRef.current, { type: "lines" })
 
       gsap.from(split.lines, {
         y: 80,
@@ -37,9 +31,6 @@ const Blog1 = () => {
         },
       })
 
-      /* --------------------------------
-         STAGGER FADE-IN 2 BIG Blog1 POSTS
-      -------------------------------- */
       gsap.from(bottomBlog1sRef.current.children, {
         y: 60,
         opacity: 0,
@@ -52,10 +43,6 @@ const Blog1 = () => {
         },
       })
 
-      /* -----------------------------
-         TOP READS LIST (RIGHT SIDE)
-         — STAGGER BOTTOM UP
-      ------------------------------ */
       gsap.from(rightBlog1sRef.current.children, {
         y: 60,
         opacity: 0,
@@ -83,27 +70,27 @@ const Blog1 = () => {
 
         {/* HEADER (split text) */}
         <div ref={headerRef}>
-          <h1>OSAHON</h1>
-          <h1 className='ml-[20%] max-lg:ml-10'>SHOES</h1>
-          <h1 className='ml-[40%] max-lg:ml-20'>ADVICE</h1>
+          <h1>Huje</h1>
+          <h1 className='ml-[20%] max-lg:ml-10'>Consult</h1>
+          <h1 className='ml-[40%] max-lg:ml-20'>Insights</h1>
         </div>
 
-        {/* TWO WIDE Blog1 POSTS */}
+        {/* TWO WIDE Blog POSTS */}
         <div
           ref={bottomBlog1sRef}
           className='flex flex-row gap-28 mt-10 max-lg:flex-col max-lg:gap-12'
         >
           <div className='max-w-[300px]'>
-            <img className='w-[300px]' src={'/shoedemo5.png'} />
+            <img className='w-[300px]' src={'/house.png'} />
             <p className='font-sans text-lg mt-2'>
-              Top 5 reasons your oxfords don't last
+              How to evaluate a neighbourhood before buying
             </p>
           </div>
 
           <div className='max-w-[300px]'>
-            <img className='w-[300px]' src={'/shoedemo5.png'} />
+            <img className='w-[300px]' src={'/modern_house.png'} />
             <p className='font-sans text-lg mt-2'>
-              Top 5 reasons your oxfords don't last
+              Tips for first-time property investors
             </p>
           </div>
         </div>
@@ -114,14 +101,19 @@ const Blog1 = () => {
         <h2 className='text-4xl mb-4 max-md:text-3xl'>Top Reads</h2>
 
         <div ref={rightBlog1sRef}>
-          {[1,2,3,4].map((product) => (
+          {[
+            {title: 'Market Trends 2025'},
+            {title: 'Financing Options'},
+            {title: 'Maintenance Tips'},
+            {title: 'Selling Strategy'},
+          ].map((item, i) => (
             <div
-              key={product}
+              key={i}
               className='max-w-[400px] gap-8 items-center flex flex-row mb-6'
             >
-              <img className='size-20 object-cover' src={'/shoedemo5.png'} />
+              <img className='size-20 object-cover' src={'/house.png'} />
               <p className='font-sans text-lg'>
-                Top 5 reasons your oxfords don't last
+                {item.title}
               </p>
             </div>
           ))}

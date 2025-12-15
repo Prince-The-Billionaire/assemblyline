@@ -9,7 +9,8 @@ import { AiFillStar } from "react-icons/ai"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
-const accent = "#3b2f2f"
+// accent color changed to light blue
+const accent = "#60a5fa"
 
 const profiles = [
   { letter: "A", bg: "bg-yellow-400" },
@@ -33,7 +34,6 @@ const Proof3: React.FC = () => {
     const root = rootRef.current
     if (!root) return
 
-    // marquee scroll
     if (marqueeRef.current) {
       gsap.fromTo(
         marqueeRef.current,
@@ -49,7 +49,6 @@ const Proof3: React.FC = () => {
       },
     })
 
-    // Number pop
     tl.from(numberRef.current, {
       y: 20,
       opacity: 0,
@@ -58,7 +57,6 @@ const Proof3: React.FC = () => {
       ease: "power3.out",
     })
 
-    // CHARACTER SPLITTEXT ANIMATION
     if (headingRef.current) {
       const split = new SplitText(headingRef.current, {
         type: "chars",
@@ -79,7 +77,6 @@ const Proof3: React.FC = () => {
       )
     }
 
-    // Bullet points fade
     tl.from(pointsRef.current?.children || [], {
       opacity: 0,
       y: 10,
@@ -88,7 +85,6 @@ const Proof3: React.FC = () => {
       ease: "power2.out",
     })
 
-    // Profiles
     tl.from(profilesRef.current?.children || [], {
       opacity: 0,
       x: -10,
@@ -96,7 +92,6 @@ const Proof3: React.FC = () => {
       duration: 0.45,
     })
 
-    // Stars
     tl.from(starsRef.current, {
       scale: 0.7,
       opacity: 0,
@@ -104,7 +99,6 @@ const Proof3: React.FC = () => {
       ease: "back.out(1.7)",
     })
 
-    // MOBILE IMAGE SCALE ON SCROLL
     gsap.to(imageRef.current, {
       scale: 1.15,
       scrollTrigger: {
@@ -118,7 +112,6 @@ const Proof3: React.FC = () => {
 
   return (
     <section ref={rootRef} className="relative min-h-screen overflow-hidden">
-      {/* Marquee */}
       <div className="w-full overflow-hidden bg-white/20 backdrop-blur-sm py-2">
         <div
           ref={marqueeRef}
@@ -126,36 +119,34 @@ const Proof3: React.FC = () => {
         >
           {[...Array(15)].map((_, i) => (
             <span key={i} className="flex items-center gap-3 text-black">
-              <FaSnowflake size={20} /> Christmas Sales • 30% OFF
+              <FaSnowflake size={20} className="text-sky-400" /> Huje Consult • New Listings
             </span>
           ))}
         </div>
       </div>
 
-      {/* CONTENT: mobile = stacked, desktop = side-by-side */}
       <div className="
         max-w-7xl mx-auto px-4 py-10 
         grid grid-cols-1 md:grid-cols-2 
         gap-10 items-center
       ">
         
-        {/* LEFT — TEXT */}
         <div className="order-1 md:order-1">
           <div ref={numberRef} className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            100k+ items sold
+            10k+ properties listed
           </div>
 
           <h2
             ref={headingRef}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black font-salsa leading-tight mb-4"
           >
-            Discover the shoes everyone is talking about
+            Discover the right properties
           </h2>
 
           <div ref={pointsRef} className="space-y-2 text-black/90 mb-6">
-            <div>• Premium look and aesthetic</div>
-            <div>• Properly fitted</div>
-            <div>• 3-5 Days delivery</div>
+            <div>• Curated selections across prime locations</div>
+            <div>• Transparent pricing and local market insights</div>
+            <div>• Dedicated support from viewing to closing</div>
           </div>
 
           <div className="flex items-center justify-between">
@@ -170,7 +161,7 @@ const Proof3: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <span className="ml-4 text-sm text-black/80">200+ reviews</span>
+              <span className="ml-4 text-sm text-black/80">5k+ happy clients</span>
             </div>
 
             <div ref={starsRef} className="flex items-center gap-1">
@@ -183,7 +174,6 @@ const Proof3: React.FC = () => {
           </div>
         </div>
 
-        {/* RIGHT — IMAGE */}
         <div
           ref={imageRef}
           className="
@@ -191,7 +181,7 @@ const Proof3: React.FC = () => {
             rounded-lg overflow-hidden 
             h-[60vh] bg-cover bg-center
           "
-          style={{ backgroundImage: "url('/shoedemo4.png')" }}
+          style={{ backgroundImage: "url('/modern_house.png')" }}
         />
       </div>
     </section>
